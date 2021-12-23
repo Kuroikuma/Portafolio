@@ -22,7 +22,7 @@ export const ProyectViewCard = (props) => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [dispatch]);
 
   useEffect(() => {
     const ChangeImgtime = setTimeout(() => {
@@ -45,7 +45,7 @@ export const ProyectViewCard = (props) => {
       }
     }, 5000);
     return () => clearTimeout(ChangeImgtime);
-  }, [numberImg]);
+  }, [numberImg, dispatch]);
 
   const changeImg = (event) => {
     let { name } = event.target;

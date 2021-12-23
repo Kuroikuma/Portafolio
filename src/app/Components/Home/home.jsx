@@ -5,8 +5,7 @@ import Facebook from "../../../Assets/facebook.png";
 import LinkedIn from "../../../Assets/linkedin.png";
 import Perfil from "../../../Assets/IMG-20210430-WA0013.jpg";
 export const Home = () => {
-  const [height, setHeight] = useState(window.innerHeight);
-
+  const height = window.innerHeight;
   const [show, setShow] = useState(false);
 
   const dropDownHadler = (e) => {
@@ -87,6 +86,7 @@ export const Home = () => {
       <div className="HomeContainer__Info__Contact">
         <div className="HomeContainer__Info__Contact__item HomeContainer__Info__Contact__LinkedIn">
           <a
+            rel="noreferrer"
             href="https://www.linkedin.com/in/ulisse-hurtado-cabrera-700409212/"
             target="_blank"
           >
@@ -98,7 +98,11 @@ export const Home = () => {
           </a>
         </div>
         <div className="HomeContainer__Info__Contact__item  HomeContainer__Info__Contact__Facebook">
-          <a href="https://www.facebook.com/ulissejr08" target="_blank">
+          <a
+            rel="noreferrer"
+            href="https://www.facebook.com/ulissejr08"
+            target="_blank"
+          >
             <img
               className="HomeContainer__Info__Contact__img"
               src={Facebook}
@@ -107,7 +111,11 @@ export const Home = () => {
           </a>
         </div>
         <div className="HomeContainer__Info__Contact__item  HomeContainer__Info__Contact__GitHub">
-          <a href="https://github.com/Kuroikuma" target="_blank">
+          <a
+            rel="noreferrer"
+            href="https://github.com/Kuroikuma"
+            target="_blank"
+          >
             <img
               className="HomeContainer__Info__Contact__img"
               src={GitHub}

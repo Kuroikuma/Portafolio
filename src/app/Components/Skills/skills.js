@@ -16,7 +16,7 @@ export const Skill = () => {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [dispatch]);
   const index = skills.length;
   const data1 = skills.slice(0, index / 2);
   const data2 = skills.slice(index / 2, index);

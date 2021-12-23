@@ -6,8 +6,7 @@ export const getProyect = () => {
   return fetch(baseUrl)
     .then((res) => res.json())
     .then((response) => {
-      const data = ([] = [...response]);
-      return data;
+      return response;
     })
     .catch((error) => {
       console.log(error);
