@@ -1,0 +1,87 @@
+.app {
+  overflow: hidden;
+}
+
+.App-logo {
+  height: 40vh;
+  overflow: hidden;
+  pointer-events: none;
+}
+.go-top-container {
+  position: fixed;
+  width: 3rem;
+  height: 3rem;
+  bottom: 0rem;
+  right: 1rem;
+  transition: 0.2s;
+  z-index: -1;
+}
+.go-top-button {
+  width: 0rem;
+  height: 0rem;
+  background-color: white;
+  border-radius: 50%;
+  transition: 0.2s;
+  cursor: pointer;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -10;
+}
+.go-top-button img {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 0%;
+  height: 0%;
+  transition: 0.2s;
+}
+.showApp {
+  z-index: 500;
+}
+.showApp .go-top-button {
+  animation: popop 0.3s ease-in-out;
+  width: 3rem;
+  height: 3rem;
+  z-index: 501;
+}
+.showApp img {
+  object-fit: contain;
+  width: 50%;
+  height: 50%;
+}
+@keyframes popop {
+  0% {
+    width: 0rem;
+    height: 0rem;
+  }
+  50% {
+    width: 4rem;
+    height: 4rem;
+  }
+  100% {
+    width: 3rem;
+    height: 3rem;
+  }
+}
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+  position: relative;
+}
+
+.App-link {
+  color: #61dafb;
+}
+.TypeWraper {
+  display: flex;
+  width: 100vw;
+  justify-content: center;
+  align-items: baseline;
+}

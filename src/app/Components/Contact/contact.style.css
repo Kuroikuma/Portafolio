@@ -1,0 +1,44 @@
+.ContactContainer {
+  height: 100vh;
+  width: 98.7vw;
+  background-color: #fad201;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ContactContainer__Circle {
+  background-color: #232120;
+  height: 90%;
+  width: 98.7vw;
+  position: absolute;
+  top: 255vh;
+  clip-path: ellipse(50% 17% at 50% 50%);
+}
+.ContactContainer__info {
+  height: 60%;
+  width: 80%;
+  background: #232120;
+  border: 20px solid #ffffff;
+  box-sizing: border-box;
+  backdrop-filter: blur(4px);
+  border-radius: 60px;
+}
+@media screen and (max-width: 1024px) {
+  .ContactContainer {
+    width: 100vw;
+  }
+  .ContactContainer__Circle {
+    width: 100vw;
+  }
+}
+@media screen and (max-width: 768px) {
+  .ContactContainer__Circle {
+    top: 335vh;
+  }
+}
+@media screen and (max-width: 425px) {
+  .ContactContainer__Circle {
+    top: 255vh;
+  }
+}
+

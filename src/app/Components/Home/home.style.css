@@ -1,0 +1,252 @@
+.HomeContainer {
+  height: 100vh;
+  width: 98.7vw;
+  background-color: #232120;
+}
+
+.HomeContainer__NavBar {
+  height: 10%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+}
+.HomeContainer__NavBar__Rigth {
+  height: 50%;
+  width: 40%;
+  background-color: white;
+  border-radius: 8px;
+  margin-right: 40px;
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: auto auto auto auto;
+  gap: 10px;
+}
+.HomeContainer__NavBar__Rigth__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-left: 1px solid #232120;
+  cursor: pointer;
+}
+.HomeContainer__NavBar__Rigth__item button {
+  height: 100%;
+  width: 100%;
+  border: none;
+  font-weight: bold;
+  background-color: white;
+  cursor: pointer;
+}
+.HomeContainer__NavBar__Rigth__item:first-of-type {
+  border-left: none;
+}
+
+.HomeContainer__Image {
+  background-color: #fad201;
+  height: 50vh;
+  width: 18vw;
+  border-radius: 30px;
+  border: 15px solid #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 20vh;
+  top: 20vh;
+}
+.titleInfo {
+  font-family: roboto, lato, sans-serif;
+  font-weight: bold;
+}
+.HomeContainer__Image img {
+  height: 90%;
+  border-radius: 20px;
+}
+.HomeContainer__Info {
+  height: 30vh;
+  width: 40vw;
+  background-color: #fad201;
+  border-radius: 30px;
+  border: 15px solid #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 100vh;
+  top: 30vh;
+}
+.HomeContainer__Info p {
+  height: 60%;
+  width: 80%;
+  font-family: roboto, lato, sans-serif;
+}
+.HomeContainer__Circle {
+  background-color: #fad201;
+  height: 90%;
+  width: 98.7vw;
+  position: absolute;
+  top: 55vh;
+  clip-path: ellipse(50% 17% at 50% 50%);
+}
+.HomeContainer__Info__Contact {
+  height: 6%;
+  width: 20%;
+  position: absolute;
+  left: 120vh;
+  top: 62vh;
+  display: flex;
+  justify-content: space-between;
+}
+.HomeContainer__Info__Contact__item {
+  height: 100%;
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+.HomeContainer__Info__Contact__item a {
+  height: 100%;
+  width: 100%;
+}
+.HomeContainer__Info__Contact__img {
+  height: 100%;
+  width: 50%;
+  object-fit: contain;
+}
+.Desplegable {
+  position: absolute;
+  opacity: 0;
+}
+/*768*/
+@media screen and (max-width: 1024px) {
+  .HomeContainer {
+    width: 100vw;
+  }
+  .HomeContainer__Image {
+    height: 40vh;
+    width: 22vw;
+    left: 10vw;
+    border-radius: 30px;
+  }
+  .HomeContainer__Info {
+    width: 50vw;
+    left: 40vw;
+  }
+  .HomeContainer__Info p {
+    height: 80%;
+    width: 90%;
+  }
+  .HomeContainer__Info__Contact {
+    left: 57vw;
+  }
+  .HomeContainer__Circle {
+    width: 100vw;
+    top: 56vh;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .HomeContainer {
+    width: 100vw;
+  }
+  .HomeContainer__NavBar {
+    height: 100%;
+    width: 40%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+  }
+  .HomeContainer__NavBar__Rigth {
+    height: 100%;
+    width: 100%;
+    z-index: 100;
+    transform: translate(-200px);
+    opacity: 0;
+    transition-property: opacity, transform, -webkit-transform;
+    transition-timing-function: ease;
+    transition-duration: 1s;
+    background-color: #fad201;
+    border-radius: 0px;
+    margin-right: 0px;
+    display: grid;
+    overflow: hidden;
+    grid-template-columns: auto;
+    gap: 10px;
+  }
+  .HomeContainer__NavBar__Rigth.show {
+    transform: none;
+    opacity: 1;
+  }
+  .HomeContainer__NavBar__Rigth__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-left: none;
+    cursor: pointer;
+  }
+  .HomeContainer__NavBar__Rigth__item button {
+    height: 70%;
+    width: 70%;
+    border-radius: 10px;
+    font-weight: bold;
+    background-color: #232120;
+    color: #ffffff;
+    cursor: pointer;
+    font-size: 25px;
+  }
+  .HomeContainer__NavBar__Rigth__item:first-of-type {
+    border-left: none;
+  }
+  .Desplegable {
+    opacity: 1;
+    left: 90vw;
+    top: 2vh;
+    z-index: 200;
+  }
+  .Desplegable button {
+    height: 5vh;
+    width: 5vh;
+  }
+  .HomeContainer__Image {
+    height: 40vh;
+    width: 30vw;
+    left: 5vw;
+    border-radius: 30px;
+  }
+
+  .HomeContainer__Info p {
+    height: 80%;
+    width: 100%;
+    font-size: 16px;
+  }
+  .HomeContainer__Info__Contact__img {
+    height: 100%;
+    width: 70%;
+  }
+  .HomeContainer__Circle {
+    width: 100vw;
+    top: 56vh;
+  }
+}
+@media screen and (max-width: 425px) {
+  .HomeContainer__NavBar {
+    width: 100%;
+  }
+  .HomeContainer__Info {
+    width: 80vw;
+    left: 10vw;
+    top: 50vh;
+  }
+  .HomeContainer__Info__Contact {
+    left: 25vw;
+    top: 80vh;
+    width: 30%;
+  }
+  .HomeContainer__Image {
+    height: 40vh;
+    width: 50vw;
+    top: 5vh;
+    left: 22vw;
+    border-radius: 30px;
+  }
+}
