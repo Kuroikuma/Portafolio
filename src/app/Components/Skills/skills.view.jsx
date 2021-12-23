@@ -8,9 +8,10 @@ export const SkillView = (props) => {
     showTitleSkills,
     SkillstRef,
     showSkills,
+    PageSkillRef,
   } = props;
   return (
-    <div className="SkillContainer">
+    <div ref={PageSkillRef} className="SkillContainer">
       <div
         ref={TitleSkillsRef}
         className={

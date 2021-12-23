@@ -5,7 +5,18 @@ import { setSkill } from "../../../redux/actions/proyect-action";
 import { useDispatch, useSelector } from "react-redux";
 import { getSkill } from "../../../services/services-skill";
 
-export const Skill = () => {
+export const Skill = (props) => {
+  const { setHead } = props;
+
+  const [PageSkillRef, showPageSkill] = useOnScreen({
+    rootMargin: "-200px",
+  });
+
+  useEffect(() => {
+    console.log("que a pahshao");
+    if (showPageSkill) setHead("Skills");
+  }, [showPageSkill, setHead]);
+
   const skills = useSelector((state) => state.proyectReducer.skills);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -34,6 +45,7 @@ export const Skill = () => {
       showTitleSkills={showTitleSkills}
       SkillstRef={SkillstRef}
       showSkills={showSkills}
+      PageSkillRef={PageSkillRef}
     />
   );
 };

@@ -112,7 +112,7 @@ div {
     height: auto;
     width: 100vw;
   }
-  .SkillContainer__Skills.show {
+  .SkillContainer__Skills {
     margin-top: 5vh;
     z-index: 200;
   }
@@ -130,7 +130,7 @@ div {
   .SkillContainer__Skills__item {
     height: 20vh;
   }
-  .SkillContainer__Skills.show {
+  .SkillContainer__Skills {
     border-radius: 40px;
   }
 }

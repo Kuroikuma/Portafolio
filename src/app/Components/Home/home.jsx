@@ -1,12 +1,22 @@
 import "./home.style.css";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import GitHub from "../../../Assets/github.png";
+import { useOnScreen } from "../../hooks/useOnScreen";
 import Facebook from "../../../Assets/facebook.png";
 import LinkedIn from "../../../Assets/linkedin.png";
 import Perfil from "../../../Assets/IMG-20210430-WA0013.jpg";
-export const Home = () => {
+export const Home = (props) => {
+  const { setHead } = props;
   const height = window.innerHeight;
   const [show, setShow] = useState(false);
+
+  const [HomeRef, showHome] = useOnScreen({
+    rootMargin: "0px",
+  });
+
+  useEffect(() => {
+    if (showHome) setHead("Home");
+  }, [showHome, setHead]);
 
   const dropDownHadler = (e) => {
     setShow(!show);
@@ -23,7 +33,7 @@ export const Home = () => {
         window.scrollTo({ top: height, behavior: "smooth" });
         setShow(false);
         break;
-      case "Proyect":
+      case "Project":
         window.scrollTo({ top: height * 2, behavior: "smooth" });
         setShow(false);
         break;
@@ -37,7 +47,7 @@ export const Home = () => {
     }
   };
   return (
-    <div className="HomeContainer">
+    <div ref={HomeRef} className="HomeContainer">
       <div className="Desplegable">
         <button onClick={dropDownHadler}></button>
       </div>
@@ -60,8 +70,8 @@ export const Home = () => {
             </button>
           </div>
           <div className="HomeContainer__NavBar__Rigth__item">
-            <button name="Proyect" onClick={ScrollChange}>
-              Proyect
+            <button name="Project" onClick={ScrollChange}>
+              Project
             </button>
           </div>
           <div className="HomeContainer__NavBar__Rigth__item">

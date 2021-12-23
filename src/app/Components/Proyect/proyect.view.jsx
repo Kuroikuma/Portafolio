@@ -1,4 +1,5 @@
 import "./proyect.style.css";
+
 import { ProyectViewCard } from "./proyect-view-card";
 
 export const ProyectView = (props) => {
@@ -12,9 +13,10 @@ export const ProyectView = (props) => {
     changeProyect,
     numberPro,
     proyect,
+    PageProyectRef,
   } = props;
   return (
-    <div className="ProyectContainer">
+    <div ref={PageProyectRef} className="ProyectContainer">
       <div
         className={
           showViewProyect

@@ -269,37 +269,29 @@
   }
 }
 @media screen and (max-width: 425px) {
-  .ProyectContainer__previousProyect--Left.show {
-    opacity: 1;
+  .ProyectContainer__previousProyect--Left {
     height: 10vh;
     width: 20vw;
-    transform: none;
   }
-  .ProyectContainer__Title.show {
-    opacity: 1;
-    transform: none;
+  .ProyectContainer__Title {
     width: 140%;
   }
-  .ProyectContainer__View.show {
-    opacity: 1;
-    transform: none;
+  .ProyectContainer__Title {
+    width: 140%;
+  }
+  .ProyectContainer__View {
     width: 100%;
     height: 30%;
-    border: 20px solid #fff;
     border-radius: 60px;
   }
   .ProyectContainer__View__img {
     height: 20vh;
   }
-  .ProyectContainer__nextProyect--Right.show {
-    opacity: 1;
-    transform: none;
+  .ProyectContainer__nextProyect--Right {
     width: 20vw;
     height: 10vh;
   }
-  .ProyectContainer__Info.show {
-    opacity: 1;
-    transform: none;
+  .ProyectContainer__Info {
     width: 120%;
   }
   .ProyectContainer__View__ButtonGroup {
@@ -308,8 +300,21 @@
   }
 }
 @media screen and (max-width: 375px) {
-  .ProyectContainer__previousProyect.show {
-    opacity: 1;
-    transform: none;
+  .ProyectContainer__Info {
+    width: 150%;
+  }
+  .ProyectContainer__View__ButtonGroup {
+    width: 35%;
+    height: 9.2px;
+  }
+  .ProyectContainer__View {
+    border: 10px solid #fff;
+  }
+  .ProyectContainer__View__ButtonGroup {
+    width: 35%;
+    height: 9.2px;
+  }
+  .ProyectContainer__View__img img {
+    width: 50vw;
   }
 }

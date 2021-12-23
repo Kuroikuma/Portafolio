@@ -33,12 +33,11 @@
 }
 @media screen and (max-width: 768px) {
   .ContactContainer__Circle {
-    top: 335vh;
+    top: 340vh;
   }
 }
 @media screen and (max-width: 425px) {
   .ContactContainer__Circle {
-    top: 255vh;
+    top: 260vh;
   }
 }
-

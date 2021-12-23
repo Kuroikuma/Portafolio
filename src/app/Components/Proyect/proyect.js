@@ -1,10 +1,21 @@
-import React from "react";
+import React, { useEffect } from "react";
+
 import { useDispatch, useSelector } from "react-redux";
 import { useOnScreen } from "../../hooks/useOnScreen";
 import { sigProyect, sigImg } from "../../../redux/actions/proyect-action";
 import { ProyectView } from "./proyect.view";
 
-export const Proyect = () => {
+export const Proyect = (props) => {
+  const { setHead } = props;
+
+  const [PageProyectRef, showPageProyect] = useOnScreen({
+    rootMargin: "-200px",
+  });
+
+  useEffect(() => {
+    if (showPageProyect) setHead("projects");
+  }, [showPageProyect, setHead]);
+
   const dispatch = useDispatch();
   const numberPro = useSelector((state) => state.proyectReducer.numberPro);
   const proyect = useSelector((state) => state.proyectReducer.proyect);
@@ -62,6 +73,7 @@ export const Proyect = () => {
 
   return (
     <ProyectView
+      PageProyectRef={PageProyectRef}
       changeProyect={changeProyect}
       numberPro={numberPro}
       proyect={proyect}
