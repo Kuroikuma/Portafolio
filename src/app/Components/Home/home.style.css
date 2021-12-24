@@ -261,3 +261,21 @@
     width: 80%;
   }
 }
+
+/***************    Estilando cuando esta rotado los moviles      **************/
+@media screen and (max-height: 425px) {
+  .HomeContainer__Image {
+    height: 70vh;
+    top: 10vh;
+  }
+  .HomeContainer__Info {
+    height: 40vh;
+  }
+  .HomeContainer__Info p {
+    font-size: 14px;
+  }
+  .HomeContainer__Info__Contact {
+    left: 45vw;
+    top: 74vh;
+  }
+}

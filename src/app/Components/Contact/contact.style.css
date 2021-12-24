@@ -46,3 +46,9 @@
     opacity: 0;
   }
 }
+
+@media screen and (min-height: 425px) {
+  .ContactContainer__Circle {
+    opacity: 0;
+  }
+}

@@ -304,7 +304,7 @@
     width: 150%;
   }
   .ProyectContainer__Info p {
-    font-size: 14px;
+    font-size: 12px;
   }
   .ProyectContainer__Info h3 {
     font-size: 16px;
@@ -324,5 +324,16 @@
   }
   .ProyectContainer__View__img img {
     width: 50vw;
+  }
+}
+@media screen and (min-height: 425px) {
+  .ProyectContainer__View {
+    height: 60%;
+    border-radius: 60px;
+    border: 10px solid #ffff;
+  }
+  .ProyectContainer__Info {
+    width: 130%;
+    height: 20%;
   }
 }
