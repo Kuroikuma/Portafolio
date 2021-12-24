@@ -336,4 +336,7 @@
     width: 130%;
     height: 20%;
   }
+  .ProyectContainer__Info p {
+    font-size: 12px;
+  }
 }
