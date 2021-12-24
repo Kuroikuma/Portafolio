@@ -309,6 +309,8 @@
   }
   .ProyectContainer__View {
     border: 10px solid #fff;
+    transform: none;
+    opacity: 1;
   }
   .ProyectContainer__View__ButtonGroup {
     width: 35%;

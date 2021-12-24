@@ -237,6 +237,9 @@
     left: 10vw;
     top: 50vh;
   }
+  .HomeContainer__Info p {
+    font-size: 14px;
+  }
   .HomeContainer__Info__Contact {
     left: 25vw;
     top: 80vh;
