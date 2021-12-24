@@ -303,6 +303,12 @@
   .ProyectContainer__Info {
     width: 150%;
   }
+  .ProyectContainer__Info p {
+    font-size: 14px;
+  }
+  .ProyectContainer__Info h3 {
+    font-size: 16px;
+  }
   .ProyectContainer__View__ButtonGroup {
     width: 35%;
     height: 9.2px;

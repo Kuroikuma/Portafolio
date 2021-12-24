@@ -253,3 +253,11 @@
     border-radius: 30px;
   }
 }
+@media screen and (max-width: 375px) {
+  .HomeContainer__Circle {
+    opacity: 0;
+  }
+  .SkillContainer__Title {
+    width: 80%;
+  }
+}
