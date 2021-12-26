@@ -17,11 +17,61 @@
 .ContactContainer__info {
   height: 60%;
   width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
   background: #232120;
   border: 20px solid #ffffff;
   box-sizing: border-box;
   backdrop-filter: blur(4px);
   border-radius: 60px;
+}
+.ContactContainer__info__title {
+  background-color: #ffffff;
+  width: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #232120;
+  font-family: roboto, lato, sans-serif;
+  border-radius: 30px;
+}
+.ContactContainer__info__whatsApp {
+  height: 12%;
+  width: 20%;
+  border-radius: 10px;
+  overflow: hidden;
+}
+.ContactContainer__info__whatsApp:hover {
+  box-shadow: 0px 0px 10px 2px rgba(0, 187, 45, 0.79);
+}
+.ContactContainer__info__whatsApp button {
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 187, 45, 1);
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  font-family: roboto, lato, sans-serif;
+}
+.ContactContainer__info__space p {
+  color: white;
+}
+.ContactContainer__info__gmail p {
+  font-size: 25px;
+  color: white;
+  font-family: roboto, lato, sans-serif;
+}
+p span {
+  color: #fad201;
+}
+.ContactContainer__info__space p {
+  margin: 0px;
+}
+.ContactContainer__info__gmail p {
+  margin: 0px;
 }
 @media screen and (max-width: 1024px) {
   .ContactContainer {
@@ -35,20 +85,73 @@
   .ContactContainer__Circle {
     top: 340vh;
   }
+  .ContactContainer__info__title h1 {
+    font-size: 24px;
+  }
+  .ContactContainer__info__whatsApp {
+    width: 24%;
+  }
+  .ContactContainer__info__whatsApp button {
+    font-size: 14px;
+  }
+  .ContactContainer__info__gmail p {
+    font-size: 22px;
+    color: white;
+    font-family: roboto, lato, sans-serif;
+  }
 }
 @media screen and (max-width: 425px) {
   .ContactContainer__Circle {
     top: 260vh;
+  }
+  .ContactContainer__info__title {
+    width: 70%;
+  }
+  .ContactContainer__info__title h1 {
+    font-size: 14px;
+  }
+  .ContactContainer__info__whatsApp {
+    width: 40%;
+  }
+  .ContactContainer__info__whatsApp button {
+    font-size: 12px;
+  }
+  .ContactContainer__info__gmail {
+    display: flex;
+    width: 80%;
+    justify-content: end;
+    align-items: center;
+  }
+  .ContactContainer__info__gmail p {
+    font-size: 22px;
   }
 }
 @media screen and (max-width: 375px) {
   .ContactContainer__Circle {
     opacity: 0;
   }
+  .ContactContainer__info__title h1 {
+    font-size: 13px;
+  }
+  .ContactContainer__info__whatsApp {
+    width: 50%;
+  }
+  .ContactContainer__info__whatsApp button {
+    font-size: 12px;
+  }
+  .ContactContainer__info__gmail p {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-height: 425px) {
   .ContactContainer__Circle {
     opacity: 0;
+  }
+  .ContactContainer__info__space p {
+    margin: 0px;
+  }
+  .ContactContainer__info__gmail p {
+    margin: 0px;
   }
 }

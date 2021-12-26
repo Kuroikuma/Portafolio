@@ -278,4 +278,7 @@
     left: 45vw;
     top: 74vh;
   }
+  .HomeContainer__Circle {
+    opacity: 0;
+  }
 }
