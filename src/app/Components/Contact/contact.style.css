@@ -64,7 +64,7 @@
   color: white;
   font-family: roboto, lato, sans-serif;
 }
-p span {
+.ContactContainer__info__gmail p span {
   color: #fad201;
 }
 .ContactContainer__info__space p {
