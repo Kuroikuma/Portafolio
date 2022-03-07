@@ -1,75 +1,86 @@
-import React, { useEffect } from "react";
+import React from 'react'
 
-import { useDispatch, useSelector } from "react-redux";
-import { useOnScreen } from "../../hooks/useOnScreen";
-import { sigProyect, sigImg } from "../../../redux/actions/proyect-action";
-import { ProyectView } from "./proyect.view";
+import { useDispatch, useSelector } from 'react-redux'
+import { useOnScreen } from '../../hooks/useOnScreen'
+import { sigProyect, sigImg } from '../../../redux/actions/proyect-action'
+import { ProyectView } from './proyect.view'
+import { useTitle } from '../../hooks/useTitle'
 
-export const Proyect = (props) => {
-  const { setHead } = props;
+export const Proyect = ({ setHead }) => {
+  const [PageProyectRef] = useTitle(setHead, 'Project')
 
-  const [PageProyectRef, showPageProyect] = useOnScreen({
-    rootMargin: "-200px",
-  });
+  const dispatch = useDispatch()
+  const numberPro = useSelector((state) => state.proyectReducer.numberPro)
+  const proyect = useSelector((state) => state.proyectReducer.proyect)
 
-  useEffect(() => {
-    if (showPageProyect) setHead("projects");
-  }, [showPageProyect, setHead]);
-
-  const dispatch = useDispatch();
-  const numberPro = useSelector((state) => state.proyectReducer.numberPro);
-  const proyect = useSelector((state) => state.proyectReducer.proyect);
-  const [TitleProyectRef, showTitleProyect] = useOnScreen({
-    rootMargin: "-50px",
-  });
+  
   const [ViewProyectRef, showViewProyect] = useOnScreen({
-    rootMargin: "-100px",
-  });
-  const [InfoProyectRef, showInfoProyect] = useOnScreen({
-    rootMargin: "-50px",
-  });
+    rootMargin: '-100px',
+  })
+ 
+
+  ////// ACTION CREATOR
+
+  const oneProyect = () => {
+    dispatch(sigProyect('primeroPro'))
+  }
+  const secondProyect = () => {
+    dispatch(sigProyect('segundoPro'))
+  }
+  const threeProyect = () => {
+    dispatch(sigProyect('terceroPro'))
+  }
+
+  const resetImage = () => {
+    dispatch(sigImg('primeroImg'))
+  }
+
+  const handleNextProject = () => {
+    switch (numberPro) {
+      case 'primeroPro':
+        secondProyect()
+        resetImage()
+        break
+      case 'segundoPro':
+        threeProyect()
+        resetImage()
+        break
+      case 'terceroPro':
+        oneProyect()
+        resetImage()
+        break
+      default:
+        break
+    }
+  }
+  const handlePreviousProject = () => {
+    switch (numberPro) {
+      case 'terceroPro':
+        secondProyect()
+        resetImage()
+        break
+      case 'segundoPro':
+        oneProyect()
+        resetImage()
+        break
+      case 'primeroPro':
+        threeProyect()
+        resetImage()
+        break
+
+      default:
+        break
+    }
+  }
 
   const changeProyect = (event) => {
-    let { name } = event.target;
-    console.log(name);
-    if (name === "siguienteProyecto") {
-      switch (numberPro) {
-        case "primeroPro":
-          dispatch(sigProyect("segundoPro"));
-          dispatch(sigImg("primeroImg"));
-          break;
-        case "segundoPro":
-          dispatch(sigProyect("terceroPro"));
-          dispatch(sigImg("primeroImg"));
-          break;
-        case "terceroPro":
-          dispatch(sigProyect("primeroPro"));
-          dispatch(sigImg("primeroImg"));
-          break;
-        default:
-          break;
-      }
-    } else if (name === "anteriorProyecto") {
-      console.log(name);
-      switch (numberPro) {
-        case "terceroPro":
-          dispatch(sigProyect("segundoPro"));
-          dispatch(sigImg("primeroImg"));
-          break;
-        case "segundoPro":
-          dispatch(sigProyect("primeroPro"));
-          dispatch(sigImg("primeroImg"));
-          break;
-        case "primeroPro":
-          dispatch(sigProyect("terceroPro"));
-          dispatch(sigImg("primeroImg"));
-          break;
-
-        default:
-          break;
-      }
+    let { name } = event.target
+    if (name === 'nextProject') {
+      handleNextProject()
+    } else if (name === 'previousProject') {
+      handlePreviousProject()
     }
-  };
+  }
 
   return (
     <ProyectView
@@ -77,12 +88,8 @@ export const Proyect = (props) => {
       changeProyect={changeProyect}
       numberPro={numberPro}
       proyect={proyect}
-      TitleProyectRef={TitleProyectRef}
-      showTitleProyect={showTitleProyect}
-      InfoProyectRef={InfoProyectRef}
-      showInfoProyect={showInfoProyect}
       ViewProyectRef={ViewProyectRef}
       showViewProyect={showViewProyect}
     />
-  );
-};
+  )
+}

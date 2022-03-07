@@ -1,21 +1,12 @@
-import "./contact.style.css";
-import React, { useEffect } from "react";
-
-import { useOnScreen } from "../../hooks/useOnScreen";
+import './contact.style.css'
+import { useTitle } from '../../hooks/useTitle'
 
 export const Contact = (props) => {
-  const { setHead } = props;
+  const { setHead } = props
 
-  const [HomeRef, showHome] = useOnScreen({
-    rootMargin: "0px",
-  });
-
-  useEffect(() => {
-    if (showHome) setHead("Contact");
-  }, [showHome, setHead]);
-
+  const [ContactRef] = useTitle(setHead, 'Contact')
   return (
-    <div ref={HomeRef} className="ContactContainer">
+    <div ref={ContactRef} className="ContactContainer">
       <div className="ContactContainer__Circle"></div>
       <div className="ContactContainer__info">
         <div className="ContactContainer__info__title">
@@ -40,5 +31,5 @@ export const Contact = (props) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
