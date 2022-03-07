@@ -1,113 +1,72 @@
-import "./proyect.style.css";
+import './proyect.style.css'
 
-import { ProyectViewCard } from "./proyect-view-card";
+import { ProyectViewCard } from './proyect-view-card'
+import { Title } from './title'
+import { InfoProject } from './info'
 
 export const ProyectView = (props) => {
   const {
-    TitleProyectRef,
-    showTitleProyect,
     ViewProyectRef,
     showViewProyect,
-    InfoProyectRef,
-    showInfoProyect,
+
     changeProyect,
     numberPro,
     proyect,
     PageProyectRef,
-  } = props;
+  } = props
   return (
     <div ref={PageProyectRef} className="ProyectContainer">
       <div
         className={
           showViewProyect
-            ? "ProyectContainer__previousProyect--Left show"
-            : "ProyectContainer__previousProyect--Left"
+            ? 'ProyectContainer__previousProyect--Left show'
+            : 'ProyectContainer__previousProyect--Left'
         }
       >
         <button
-          name="anteriorProyecto"
+          name="previousProject"
           onClick={changeProyect}
           className={
             showViewProyect
-              ? "ProyectContainer__previousProyect show"
-              : "ProyectContainer__previousProyect"
+              ? 'ProyectContainer__previousProyect show'
+              : 'ProyectContainer__previousProyect'
           }
         ></button>
       </div>
       <div className="proyectContainer2">
-        <div
-          ref={TitleProyectRef}
-          className={
-            showTitleProyect
-              ? "ProyectContainer__Title show"
-              : "ProyectContainer__Title"
-          }
-        >
-          <h1>Proyectos</h1>
-        </div>
+        <Title />
         <ProyectViewCard
           showViewProyect={showViewProyect}
           ViewProyectRef={ViewProyectRef}
         />
-        {/*aqui el componete view */}
 
         {proyect.map((item) =>
-          numberPro === "primeroPro" && item.name === "PORTAFOLIO" ? (
-            <div
-              ref={InfoProyectRef}
-              className={
-                showInfoProyect
-                  ? "ProyectContainer__Info show"
-                  : "ProyectContainer__Info"
-              }
-            >
-              <h3> {item.name} </h3>
-              <p>{item.descripcion}</p>
-            </div>
-          ) : numberPro === "segundoPro" && item.name === "AMERICAN CHEESE" ? (
-            <div
-              ref={InfoProyectRef}
-              className={
-                showInfoProyect
-                  ? "ProyectContainer__Info show"
-                  : "ProyectContainer__Info"
-              }
-            >
-              <h3> {item.name} </h3>
-              <p>{item.descripcion}</p>
-            </div>
-          ) : numberPro === "terceroPro" && item.name === "MediCall" ? (
-            <div
-              ref={InfoProyectRef}
-              className={
-                showInfoProyect
-                  ? "ProyectContainer__Info show"
-                  : "ProyectContainer__Info"
-              }
-            >
-              <h3> {item.name} </h3>
-              <p>{item.descripcion}</p>
-            </div>
+          numberPro === 'primeroPro' && item.name === 'PORTAFOLIO' ? (
+            <InfoProject name={item.name} description={item.descripcion} />
+          ) : numberPro === 'segundoPro' && item.name === 'AMERICAN CHEESE' ? (
+            <InfoProject name={item.name} description={item.descripcion} />
+          ) : numberPro === 'terceroPro' && item.name === 'MediCall' ? (
+            <InfoProject name={item.name} description={item.descripcion} />
           ) : null
         )}
       </div>
       <div
         className={
           showViewProyect
-            ? "ProyectContainer__nextProyect--Right show"
-            : "ProyectContainer__nextProyect--Right"
+            ? 'ProyectContainer__nextProyect--Right show'
+            : 'ProyectContainer__nextProyect--Right'
         }
       >
         <button
-          name="siguienteProyecto"
+          name="nextProject"
           onClick={changeProyect}
           className={
             showViewProyect
-              ? "ProyectContainer__nextProyect show"
-              : "ProyectContainer__nextProyect"
+              ? 'ProyectContainer__nextProyect show'
+              : 'ProyectContainer__nextProyect'
           }
         ></button>
       </div>
     </div>
-  );
-};
+  )
+}

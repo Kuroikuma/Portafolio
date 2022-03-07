@@ -11,7 +11,7 @@
   align-items: center;
   justify-content: end;
 }
-.HomeContainer__NavBar__Rigth {
+.HomeContainer__NavBar__Right {
   height: 50%;
   width: 40%;
   background-color: white;
@@ -22,14 +22,14 @@
   grid-template-columns: auto auto auto auto;
   gap: 10px;
 }
-.HomeContainer__NavBar__Rigth__item {
+.HomeContainer__NavBar__Right__item {
   display: flex;
   justify-content: center;
   align-items: center;
   border-left: 1px solid #232120;
   cursor: pointer;
 }
-.HomeContainer__NavBar__Rigth__item button {
+.HomeContainer__NavBar__Right__item button {
   height: 100%;
   width: 100%;
   border: none;
@@ -37,7 +37,7 @@
   background-color: white;
   cursor: pointer;
 }
-.HomeContainer__NavBar__Rigth__item:first-of-type {
+.HomeContainer__NavBar__Right__item:first-of-type {
   border-left: none;
 }
 
@@ -156,7 +156,7 @@
     align-items: center;
     justify-content: start;
   }
-  .HomeContainer__NavBar__Rigth {
+  .HomeContainer__NavBar__Right {
     height: 100%;
     width: 100%;
     z-index: 100;
@@ -173,18 +173,18 @@
     grid-template-columns: auto;
     gap: 10px;
   }
-  .HomeContainer__NavBar__Rigth.show {
+  .HomeContainer__NavBar__Right.show {
     transform: none;
     opacity: 1;
   }
-  .HomeContainer__NavBar__Rigth__item {
+  .HomeContainer__NavBar__Right__item {
     display: flex;
     justify-content: center;
     align-items: center;
     border-left: none;
     cursor: pointer;
   }
-  .HomeContainer__NavBar__Rigth__item button {
+  .HomeContainer__NavBar__Right__item button {
     height: 70%;
     width: 70%;
     border-radius: 10px;
@@ -194,7 +194,7 @@
     cursor: pointer;
     font-size: 25px;
   }
-  .HomeContainer__NavBar__Rigth__item:first-of-type {
+  .HomeContainer__NavBar__Right__item:first-of-type {
     border-left: none;
   }
   .Desplegable {

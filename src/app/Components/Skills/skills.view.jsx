@@ -1,4 +1,4 @@
-import "./skills.style.css";
+import './skills.style.css'
 
 export const SkillView = (props) => {
   const {
@@ -6,26 +6,26 @@ export const SkillView = (props) => {
     data2,
     TitleSkillsRef,
     showTitleSkills,
-    SkillstRef,
+    SkillsRef,
     showSkills,
     PageSkillRef,
-  } = props;
+  } = props
   return (
     <div ref={PageSkillRef} className="SkillContainer">
       <div
         ref={TitleSkillsRef}
         className={
           showTitleSkills
-            ? "SkillContainer__Title show"
-            : "SkillContainer__Title"
+            ? 'SkillContainer__Title show'
+            : 'SkillContainer__Title'
         }
       >
         <h1>HABILIDADES</h1>
       </div>
       <div
-        ref={SkillstRef}
+        ref={SkillsRef}
         className={
-          showSkills ? "SkillContainer__Skills show" : "SkillContainer__Skills"
+          showSkills ? 'SkillContainer__Skills show' : 'SkillContainer__Skills'
         }
       >
         <div className="SkillContainer__Skills__Columns">
@@ -56,5 +56,5 @@ export const SkillView = (props) => {
         </div>
       </div>
     </div>
-  );
-};
+  )
+}
