@@ -20,7 +20,7 @@ export const SkillView = (props) => {
             : 'SkillContainer__Title'
         }
       >
-        <h1>HABILIDADES</h1>
+        <h1>SKILLS</h1>
       </div>
       <div
         ref={SkillsRef}
@@ -36,7 +36,7 @@ export const SkillView = (props) => {
               </div>
               <div className="SkillContainer__Skills__item__space"></div>
               <div className="SkillContainer__Skills__item__Info">
-                {item.name}
+                <p>{item.name}</p>
               </div>
             </div>
           ))}
@@ -49,7 +49,7 @@ export const SkillView = (props) => {
               </div>
               <div className="SkillContainer__Skills__item__space"></div>
               <div className="SkillContainer__Skills__item__Info">
-                {item.name}
+                <p>{item.name}</p>
               </div>
             </div>
           ))}
