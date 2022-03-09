@@ -35,6 +35,7 @@ export const Skill = (props) => {
     <SkillView
       data1={data1}
       data2={data2}
+      skills={skills}
       TitleSkillsRef={TitleSkillsRef}
       showTitleSkills={showTitleSkills}
       SkillsRef={SkillsRef}

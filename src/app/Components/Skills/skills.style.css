@@ -31,7 +31,7 @@ div {
 }
 .SkillContainer__Title h1 {
   color: #ffffff;
-  font-family: roboto, lato, sans-serif;
+  font-family: Inter;
 }
 .SkillContainer__Skills {
   height: 75%;
@@ -60,9 +60,8 @@ div {
   align-items: center;
 }
 .SkillContainer__Skills__item {
-  height: 80%;
+  height: 90%;
   width: 15%;
-  margin-top: 20px;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
@@ -86,11 +85,16 @@ div {
   height: 15%;
   width: 70%;
   display: flex;
-  font-family: roboto, lato, sans-serif;
+
   justify-content: center;
   align-items: center;
   background-color: white;
   border-radius: 5px;
+}
+.SkillContainer__Skills__item__Info p {
+  font-family: Inter;
+  color: black;
+  font-weight: bold;
 }
 .SkillContainer__Skills__item__Image img {
   height: 100%;

@@ -8,6 +8,6 @@ export const useTitle = (setHead, title = 'Home') => {
 
   useEffect(() => {
     if (showHome) setHead(title)
-  }, [showHome, setHead])
+  }, [showHome, setHead, title])
   return [HomeRef]
 }
