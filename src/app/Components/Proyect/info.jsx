@@ -1,20 +1,27 @@
-import { useOnScreen } from '../../hooks/useOnScreen'
+import { Button } from './button'
+import { GroupButton } from './buttonGroup'
 
-export const InfoProject = ({ name, description }) => {
-  const [InfoProyectRef, showInfoProyect] = useOnScreen({
-    rootMargin: '-50px',
-  })
+export const InfoProject = (props) => {
+  const { name, descripcion, technologies, url_code, url_demo, id } = props
   return (
-    <div
-      ref={InfoProyectRef}
-      className={
-        showInfoProyect
-          ? 'ProyectContainer__Info show'
-          : 'ProyectContainer__Info'
-      }
-    >
-      <h3> {name} </h3>
-      <p>{description}</p>
+    <div className="ProjectContainer__Card__info">
+      <div className="ProjectContainer__Card__info__title">
+        <h1>{name}</h1>
+      </div>
+      <GroupButton>
+        {technologies &&
+          technologies.map((item) => (
+            <Button key={`${id}${item}`} value={item} />
+          ))}
+      </GroupButton>
+      <div className="ProjectContainer__Card__info__text">
+        <p>{descripcion}</p>
+      </div>
+      <div className="ProjectContainer__Card__info__link">
+        <a href={url_code}>View Code</a>
+        <a href={url_demo}>View Project</a>
+        <a href="">View Details</a>
+      </div>
     </div>
   )
 }

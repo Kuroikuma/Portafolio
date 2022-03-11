@@ -1,4 +1,4 @@
-import { useOnScreen } from "../../hooks/useOnScreen"
+import { useOnScreen } from '../../hooks/useOnScreen'
 
 export const Title = () => {
   const [TitleProyectRef, showTitleProyect] = useOnScreen({
@@ -13,7 +13,7 @@ export const Title = () => {
           : 'ProyectContainer__Title'
       }
     >
-      <h1>Proyectos</h1>
+      <h1>MY PROJECTS</h1>
     </div>
   )
 }
