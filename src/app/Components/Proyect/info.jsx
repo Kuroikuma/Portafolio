@@ -20,7 +20,9 @@ export const InfoProject = (props) => {
       <div className="ProjectContainer__Card__info__link">
         <a href={url_code}>View Code</a>
         <a href={url_demo}>View Project</a>
-        <a href="">View Details</a>
+        <a href="https://www.linkedin.com/in/ulisse-hurtado-cabrera-700409212/details/projects/">
+          View Details
+        </a>
       </div>
     </div>
   )
