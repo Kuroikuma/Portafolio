@@ -1,25 +1,24 @@
-import axios from "axios";
-const apiUrl = "https://pure-ridge-19998.herokuapp.com/skill";
+import axios from 'axios'
+const apiUrl = 'https://pure-ridge-19998.herokuapp.com/api/skill'
 
-export const getSkill = () => {
-  const baseUrl = apiUrl;
-  return fetch(baseUrl)
-    .then((res) => res.json())
-    .then((response) => {
-      return response;
-    })
-    .catch((error) => {
-      console.log(error);
-    });
-};
+export const getSkill = async () => {
+  const baseUrl = apiUrl
+  try {
+    const res = await fetch(baseUrl)
+    const response = await res.json()
+    return response
+  } catch (error) {
+    console.log(error)
+  }
+}
 
 export async function postSkill(skill) {
-  const baseUrl = apiUrl;
+  const baseUrl = apiUrl
   try {
-    const result = await axios.post(baseUrl, skill);
-    console.log(result.data);
-    return result.data;
+    const result = await axios.post(baseUrl, skill)
+    console.log(result.data)
+    return result.data
   } catch (error) {
-    return "error";
+    console.log(error)
   }
 }

@@ -6,7 +6,7 @@ export const Info = () => {
       <Contact />
       <article className="infoContent">
         <h1>Hi, I’am Ulisse</h1>
-        <h3>Frontend developer</h3>
+        <h3>FullStack in JavaScript</h3>
         <p>
           Open to learn, self-taught, responsible for designing and developing
           web applications. Have participated in the development of team
