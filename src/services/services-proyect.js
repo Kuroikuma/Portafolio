@@ -1,16 +1,25 @@
 import axios from 'axios'
 const apiUrl = 'https://pure-ridge-19998.herokuapp.com/api/project'
 
-export const getProyect = () => {
+export const getProyect = async () => {
   const baseUrl = apiUrl
-  return fetch(baseUrl)
-    .then((res) => res.json())
-    .then((response) => {
-      return response
-    })
-    .catch((error) => {
-      console.log(error)
-    })
+  try {
+    const res = await fetch(baseUrl)
+    const response = await res.json()
+    return response
+  } catch (error) {
+    console.log(error)
+  }
+}
+
+export const getProyectPagination = async (url) => {
+  try {
+    const res = await fetch(url)
+    const response = await res.json()
+    return response
+  } catch (error) {
+    console.log(error)
+  }
 }
 
 export async function postProyect(proyect) {

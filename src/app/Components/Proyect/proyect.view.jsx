@@ -1,53 +1,31 @@
 import './proyect.style.css'
 import { ProyectViewCard } from './proyect-view-card'
 import { Title } from './title'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
 
-export const ProyectView = ({ PageProyectRef, project }) => {
+export const ProyectView = ({ PageProyectRef, project, setUrl }) => {
   const [counter, setCounter] = useState(0)
-  const [newProject, setNewProject] = useState([])
 
+  console.log(project)
   const nextCounter = () => {
     if (counter < 4) {
       setCounter(counter + 1)
+      setUrl(project.next)
     }
   }
   const previewCounter = () => {
+    console.log(project.previous)
     if (counter > 0) {
       setCounter(counter - 1)
+      setUrl(project.previous ? project.previous : '')
     }
   }
-  useEffect(() => {
-    const handleProject = () => {
-      switch (counter) {
-        case 0:
-          setNewProject(project.slice(0, 2))
-          break
-        case 1:
-          setNewProject(project.slice(0, 4))
-          break
-        case 2:
-          setNewProject(project.slice(0, 6))
-          break
-        case 3:
-          setNewProject(project.slice(0, 8))
-          break
-        case 4:
-          setNewProject(project.slice(0, 11))
-          break
-
-        default:
-          break
-      }
-    }
-    handleProject()
-  }, [counter, project])
 
   return (
     <div ref={PageProyectRef} className="ProyectContainer">
       <Title />
-      {newProject &&
-        newProject.map((item, index) => (
+      {project.result &&
+        project.result.map((item, index) => (
           <ProyectViewCard
             key={`${item.id}${item.name}`}
             type={index % 2 === 0 ? 'left' : 'right'}
