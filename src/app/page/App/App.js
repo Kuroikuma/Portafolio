@@ -9,7 +9,7 @@ import { useScroll } from '../../hooks/useScroll'
 import Helmet from 'react-helmet'
 import { Cert } from '../../Components/cert/cert'
 
-export function App() {
+export const App = () => {
   const [show, ScrollChange] = useScroll()
 
   return (
