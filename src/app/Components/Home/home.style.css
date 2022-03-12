@@ -8,49 +8,6 @@
   align-items: center;
   gap: 50px;
 }
-.HomeContainer__NavBar {
-  height: 62px;
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: end;
-  background: rgb(4 25 58 / 65%);
-}
-.HomeContainer__NavBar__Right {
-  height: 50%;
-  width: 50%;
-  border-radius: 8px;
-  margin-right: 40px;
-  display: grid;
-  overflow: hidden;
-  grid-template-columns: auto auto auto auto auto;
-  gap: 10px;
-}
-.HomeContainer__NavBar__Right__item {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  cursor: pointer;
-}
-.HomeContainer__NavBar__Right__item button {
-  height: 100%;
-  width: 100%;
-  border: none;
-  background-color: transparent;
-  cursor: pointer;
-}
-.HomeContainer__NavBar__Right__item button {
-  font-family: Inter;
-  font-weight: 500;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 28px;
-  color: #f9690e;
-}
-.dropdown {
-  position: absolute;
-  opacity: 0;
-}
 .homeContent {
   width: 70%;
   height: 70%;
@@ -130,108 +87,13 @@
   -webkit-text-fill-color: transparent;
 }
 
-/*768*/
 @media screen and (max-width: 1024px) {
-  .HomeContainer {
-    width: 100vw;
-  }
 }
-
 @media screen and (max-width: 768px) {
-  .HomeContainer {
-    width: 100vw;
-  }
-  .HomeContainer__NavBar {
-    height: 100%;
-    width: 40%;
-    position: absolute;
-    display: flex;
-    align-items: center;
-    justify-content: start;
-  }
-  .HomeContainer__NavBar__Right {
-    height: 100%;
-    width: 100%;
-    z-index: 100;
-    transform: translate(-200px);
-    opacity: 0;
-    transition-property: opacity, transform, -webkit-transform;
-    transition-timing-function: ease;
-    transition-duration: 1s;
-    background-color: #fad201;
-    border-radius: 0px;
-    margin-right: 0px;
-    display: grid;
-    overflow: hidden;
-    grid-template-columns: auto;
-    gap: 10px;
-  }
-  .HomeContainer__NavBar__Right.show {
-    transform: none;
-    opacity: 1;
-  }
-  .HomeContainer__NavBar__Right__item {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-left: none;
-    cursor: pointer;
-  }
-  .HomeContainer__NavBar__Right__item button {
-    height: 70%;
-    width: 70%;
-    border-radius: 10px;
-    font-weight: bold;
-    background-color: #232120;
-    color: #ffffff;
-    cursor: pointer;
-    font-size: 25px;
-  }
-  .HomeContainer__NavBar__Right__item:first-of-type {
-    border-left: none;
-  }
-  .dropdown {
-    opacity: 1;
-    left: 90vw;
-    top: 2vh;
-    z-index: 200;
-  }
-  .dropdown button {
-    height: 5vh;
-    width: 5vh;
-  }
 }
 @media screen and (max-width: 425px) {
-  .HomeContainer__NavBar {
-    width: 100%;
-  }
 }
 @media screen and (max-width: 375px) {
-  .HomeContainer__Circle {
-    opacity: 0;
-  }
-  .SkillContainer__Title {
-    width: 80%;
-  }
 }
-
-/***************    Estilando cuando esta rotado los moviles      **************/
 @media screen and (max-height: 425px) {
-  .HomeContainer__Image {
-    height: 70vh;
-    top: 10vh;
-  }
-  .HomeContainer__Info {
-    height: 40vh;
-  }
-  .HomeContainer__Info p {
-    font-size: 12px;
-  }
-  .HomeContainer__Info__Contact {
-    left: 45vw;
-    top: 74vh;
-  }
-  .HomeContainer__Circle {
-    opacity: 0;
-  }
 }

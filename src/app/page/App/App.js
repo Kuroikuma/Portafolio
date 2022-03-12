@@ -1,19 +1,21 @@
-import './App.css'
+import './app.style.css'
 import React from 'react'
-import { Helmet } from 'react-helmet'
 import { Home } from '../../Components/Home/home'
 import { Skill } from '../../Components/Skills/skills'
 import caret from '../../../Assets/angulo-de-flecha-hacia-arriba.png'
 import { Proyect } from '../../Components/Proyect/proyect'
 import { Contact } from '../../Components/Contact/contact'
 import { useScroll } from '../../hooks/useScroll'
-function App() {
-  const [show, head, setHead, ScrollChange] = useScroll()
+import Helmet from 'react-helmet'
+import { Cert } from '../../Components/cert/cert'
+
+export function App() {
+  const [show, ScrollChange] = useScroll()
 
   return (
     <div className="app">
       <Helmet>
-        <title>{head}</title>
+        <title>Portfolio</title>
       </Helmet>
       <div
         onClick={ScrollChange}
@@ -23,12 +25,11 @@ function App() {
           <img src={caret} alt="goTop" />
         </div>
       </div>
-      <Home setHead={setHead} />
-      <Skill setHead={setHead} />
-      <Proyect setHead={setHead} />
-      <Contact setHead={setHead} />
+      <Home />
+      <Skill />
+      <Cert />
+      <Proyect />
+      <Contact />
     </div>
   )
 }
-
-export default App

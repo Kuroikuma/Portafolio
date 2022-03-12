@@ -3,7 +3,7 @@ import { ProyectViewCard } from './proyect-view-card'
 import { Title } from './title'
 import { useState } from 'react'
 
-export const ProyectView = ({ PageProyectRef, project, setUrl }) => {
+export const ProyectView = ({ project, setUrl }) => {
   const [counter, setCounter] = useState(0)
 
   console.log(project)
@@ -22,7 +22,7 @@ export const ProyectView = ({ PageProyectRef, project, setUrl }) => {
   }
 
   return (
-    <div ref={PageProyectRef} className="ProyectContainer">
+    <div className="ProyectContainer">
       <Title />
       {project.result &&
         project.result.map((item, index) => (

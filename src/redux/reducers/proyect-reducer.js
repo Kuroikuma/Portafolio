@@ -5,6 +5,7 @@ import { SET_SHOW_VIEW_PROYECT } from '../actions/proyect-action'
 import { SET_SHOW_INFO_PROYECT } from '../actions/proyect-action'
 import { GET_SKILLS } from '../actions/proyect-action'
 import { GET_PROYECT } from '../actions/proyect-action'
+import { TOGGLE_LOADING } from '../actions/proyect-action'
 
 const initialState = {
   numberImg: 'primeroImg',
@@ -12,6 +13,7 @@ const initialState = {
   showTitleProyect: false,
   showViewProyect: false,
   showInfoProyect: false,
+  loading: false,
   skills: [],
   proyect: {},
 }
@@ -36,6 +38,9 @@ export const proyectReducer = (state = initialState, action) => {
 
     case GET_SKILLS:
       return { ...state, skills: action.payload }
+    case TOGGLE_LOADING:
+      console.log(action.payload)
+      return { ...state, loading: action.payload }
 
     default:
       return state

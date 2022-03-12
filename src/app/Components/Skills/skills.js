@@ -1,10 +1,7 @@
 import { useOnScreen } from '../../hooks/useOnScreen'
 import { SkillView } from './skills.view'
-import { useTitle } from '../../hooks/useTitle'
 
-export const Skill = ({ setHead }) => {
-  const [PageSkillRef] = useTitle(setHead, 'Skill')
-
+export const Skill = () => {
   const [TitleSkillsRef, showTitleSkills] = useOnScreen({
     rootMargin: '-70px',
   })
@@ -17,7 +14,6 @@ export const Skill = ({ setHead }) => {
       showTitleSkills={showTitleSkills}
       SkillsRef={SkillsRef}
       showSkills={showSkills}
-      PageSkillRef={PageSkillRef}
     />
   )
 }

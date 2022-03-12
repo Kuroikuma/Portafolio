@@ -11,6 +11,16 @@ export const getProyect = async () => {
     console.log(error)
   }
 }
+export const getProyectById = async (id) => {
+  const baseUrl = `${apiUrl}/${id}`
+  try {
+    const res = await fetch(baseUrl)
+    const response = await res.json()
+    return response
+  } catch (error) {
+    console.log(error)
+  }
+}
 
 export const getProyectPagination = async (url) => {
   try {

@@ -1,0 +1,51 @@
+.dropdown {
+  position: absolute;
+  opacity: 0;
+}
+.NavBar {
+  height: 62px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: end;
+  background: rgb(4 25 58 / 65%);
+}
+.goMain {
+  position: absolute;
+  left: 217px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+}
+.NavBar__Right {
+  height: 50%;
+  width: 50%;
+  border-radius: 8px;
+  margin-right: 40px;
+  display: grid;
+  overflow: hidden;
+  grid-template-columns: auto auto auto auto auto;
+  gap: 10px;
+}
+.NavBar__Right__item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+.NavBar__Right__item button {
+  height: 100%;
+  width: 100%;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.NavBar__Right__item button {
+  font-family: Inter;
+  font-weight: 500;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+  color: #f9690e;
+}

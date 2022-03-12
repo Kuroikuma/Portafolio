@@ -1,15 +1,12 @@
+import { Navigation } from '../navigate/nav'
 import './home.style.css'
 import { Info } from './info'
-import { Navigation } from './nav'
 import { Profile } from './profile'
 
-export const HomeView = ({ HomeRef, dropDownHandler, ScrollChange, show }) => {
+export const HomeView = () => {
   return (
-    <div ref={HomeRef} className="HomeContainer">
-      <div className="dropdown">
-        <button onClick={dropDownHandler}></button>
-      </div>
-      <Navigation show={show} ScrollChange={ScrollChange} />
+    <div className="HomeContainer">
+      <Navigation />
       <div className="homeContent">
         <Info />
         <Profile />

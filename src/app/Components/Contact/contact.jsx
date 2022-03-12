@@ -1,11 +1,9 @@
 import './contact.style.css'
 import image from '../../../Assets/kindpng_3938892.png'
-import { useTitle } from '../../hooks/useTitle'
 
-export const Contact = ({ setHead }) => {
-  const [ContactRef] = useTitle(setHead, 'Contact')
+export const Contact = () => {
   return (
-    <div ref={ContactRef} className="ContactContainer">
+    <div className="ContactContainer">
       <div className="ContactContainer__title">
         <div className="ContactContainer__title__h1">
           <h1>Contact</h1>

@@ -4,15 +4,9 @@ import { SkillsList } from './skillsList'
 import { Title } from './title'
 
 export const SkillView = (props) => {
-  const {
-    TitleSkillsRef,
-    showTitleSkills,
-    SkillsRef,
-    showSkills,
-    PageSkillRef,
-  } = props
+  const { TitleSkillsRef, showTitleSkills, SkillsRef, showSkills } = props
   return (
-    <div ref={PageSkillRef} className="SkillContainer">
+    <div className="SkillContainer">
       <Title
         TitleSkillsRef={TitleSkillsRef}
         showTitleSkills={showTitleSkills}

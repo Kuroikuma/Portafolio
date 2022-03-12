@@ -49,7 +49,7 @@ div {
   grid-template-columns: repeat(4, 20%);
   grid-auto-rows: 38vh;
   opacity: 0;
-  transform: translateY(100px);
+  transform: translate(-200px);
   transition-property: opacity, transform, -webkit-transform;
   transition-timing-function: ease;
   transition-duration: 1s;
