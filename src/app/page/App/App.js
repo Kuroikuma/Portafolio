@@ -11,7 +11,6 @@ import { Cert } from '../../Components/cert/cert'
 
 export const App = () => {
   const [show, ScrollChange] = useScroll()
-
   return (
     <div className="app">
       <Helmet>

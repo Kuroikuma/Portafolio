@@ -1,6 +1,6 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
 import { HomePage } from '../app/page/homePage'
-import { App } from '../app/page/app/app'
+import { App } from '../app/page/App/App'
 import { SkillPage } from '../app/page/skillPage'
 import { ProjectPage } from '../app/page/project'
 import { ContactPage } from '../app/page/contact'
