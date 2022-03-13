@@ -1,0 +1,24 @@
+.Container__Title {
+  height: 10vh;
+  width: 60vw;
+  z-index: 1;
+  display: flex;
+  opacity: 0;
+  transform: translate(-200px);
+  transition-property: opacity, transform, -webkit-transform;
+  transition-timing-function: ease;
+  transition-duration: 1s;
+  justify-content: center;
+  align-items: center;
+  background-color: #3b3f56;
+  border-radius: 10px;
+}
+.Container__Title.show {
+  opacity: 1;
+  transform: none;
+}
+.Container__Title h1 {
+  color: #f9690e;
+  text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  font-family: Inter;
+}

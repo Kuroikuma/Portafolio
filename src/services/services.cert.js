@@ -29,7 +29,7 @@ export async function postCert(cert) {
     return result.data
   } catch (error) {
     console.log(
-      '🚀 ~ file: services.cert.js ~ line 20 ~ postProyect ~ error',
+      '🚀 ~ file: services.cert.js ~ line 20 ~ postProject ~ error',
       error
     )
   }

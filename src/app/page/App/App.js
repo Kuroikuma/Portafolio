@@ -1,13 +1,13 @@
 import './app.style.css'
 import React from 'react'
-import { Home } from '../../Components/Home/home'
-import { Skill } from '../../Components/Skills/skills'
+import { Home } from '../home/home'
+import { Skill } from '../skill/skills'
 import caret from '../../../Assets/angulo-de-flecha-hacia-arriba.png'
-import { Proyect } from '../../Components/Proyect/proyect'
-import { Contact } from '../../Components/Contact/contact'
+import { Project } from '../project/project'
+import { Contact } from '../Contact/contact'
 import { useScroll } from '../../hooks/useScroll'
 import Helmet from 'react-helmet'
-import { Cert } from '../../Components/cert/cert'
+import { Cert } from '../cert/cert'
 
 export const App = () => {
   const [show, ScrollChange] = useScroll()
@@ -24,11 +24,11 @@ export const App = () => {
           <img src={caret} alt="goTop" />
         </div>
       </div>
-      <Home />
-      <Skill />
-      <Cert />
-      <Proyect />
-      <Contact />
+      <Home flag={false} />
+      <Skill flag={false} />
+      <Cert flag={false} />
+      <Project flag={false} />
+      <Contact flag={false} />
     </div>
   )
 }

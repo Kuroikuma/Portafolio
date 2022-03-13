@@ -1,0 +1,171 @@
+.ProjectContainer {
+  height: auto;
+  min-height: 100vh;
+  width: 98.7vw;
+  padding-bottom: 30px;
+  gap: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #020c1b;
+}
+.ProjectContainer__Title {
+  height: 10vh;
+  width: 80%;
+  display: flex;
+  opacity: 0;
+  transform: translate(-200px);
+  transition-property: opacity, transform, -webkit-transform;
+  transition-timing-function: ease;
+  transition-duration: 1s;
+  justify-content: center;
+  align-items: center;
+  background: #3b3f56;
+  border-radius: 20px;
+}
+.ProjectContainer__Title.show {
+  opacity: 1;
+  transform: none;
+}
+.ProjectContainer__Title h1 {
+  color: #f9690e;
+  font-family: Inter;
+  font-weight: bold;
+}
+
+.ProjectContainer__View {
+  height: 50vh;
+  width: 70vw;
+  display: flex;
+  opacity: 0;
+  align-items: center;
+  justify-content: space-between;
+  transition-property: opacity, transform, -webkit-transform;
+  transition-timing-function: ease;
+  transition-duration: 1s;
+}
+.left {
+  transform: translate(-200px);
+  flex-direction: row-reverse;
+}
+.right {
+  transform: translate(200px);
+}
+.ProjectContainer__View.show {
+  opacity: 1;
+  transform: none;
+}
+.ProjectContainer__Card__info {
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: #3b3f56;
+  border-radius: 36px;
+  padding: 15px 30px;
+}
+.ProjectContainer__Card__info__title h1 {
+  font-family: Inter;
+  font-weight: bold;
+  color: #f9690e;
+}
+.ProjectContainer__View__ButtonGroup {
+  height: 14%;
+  width: auto;
+  min-width: 30%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 14px;
+}
+.ProjectContainer__View__ButtonGroup__item {
+  background: #020c1b;
+  height: 100%;
+  font-family: Inter;
+  font-weight: bold;
+  padding-left: 8px;
+  padding-right: 8px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  color: #f9690e;
+}
+.ProjectContainer__ButtonGroup {
+  height: 45px;
+  width: auto;
+  min-width: 10%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 14px;
+}
+.ProjectContainer__ButtonGroup {
+  font-family: Inter;
+  font-weight: bold;
+  color: #f9690e;
+}
+.ProjectContainer__Button {
+  background: #3b3f56;
+  height: 40px;
+  font-family: Inter;
+  font-weight: bold;
+  cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+  color: #f9690e;
+}
+.ProjectContainer__Card__info__text p {
+  font-family: Inter;
+  color: #ffff;
+}
+.ProjectContainer__Card__info__link {
+  min-width: 40vw;
+  display: flex;
+  justify-content: flex-start;
+  gap: 14px;
+}
+.ProjectContainer__Card__info__link a {
+  text-decoration: none;
+  font-family: Inter;
+  font-weight: bold;
+  color: #f9690e;
+  cursor: pointer;
+}
+.ProjectContainer__Card__info__link p {
+  text-decoration: none;
+  color: #f9690e;
+  font-family: Inter;
+  font-weight: bold;
+  cursor: pointer;
+}
+.ProjectContainer__Card__img {
+  height: 70%;
+  width: 35%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  background-color: #f9690e;
+  border-radius: 24px;
+}
+.ProjectContainer__Card__img img {
+  height: 100%;
+  min-width: 100%;
+  object-fit: cover;
+}
+@media screen and (max-width: 1024px) {
+}
+@media screen and (max-width: 768px) {
+}
+@media screen and (max-width: 425px) {
+}
+@media screen and (max-width: 375px) {
+}
+@media screen and (max-height: 425px) {
+}

@@ -1,10 +1,18 @@
 .container {
   height: auto;
-  width: 90vw;
+  width: 70vw;
   display: grid;
-  margin-bottom: 70px;
   grid-template-columns: repeat(3, 1fr);
   gap: 20px;
+  opacity: 0;
+  transform: translate(-200px);
+  transition-property: opacity, transform, -webkit-transform;
+  transition-timing-function: ease;
+  transition-duration: 1s;
+}
+.container.show {
+  opacity: 1;
+  transform: none;
 }
 .item {
   display: flex;

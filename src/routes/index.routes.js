@@ -1,26 +1,26 @@
 import { Routes, Route, BrowserRouter } from 'react-router-dom'
-import { HomePage } from '../app/page/homePage'
 import { App } from '../app/page/App/App'
-import { SkillPage } from '../app/page/skillPage'
-import { ProjectPage } from '../app/page/project'
-import { ContactPage } from '../app/page/contact'
-import { ProjectDetails } from '../app/page/project-details/project-detail'
+import { Project } from '../app/page/project/project'
+import { ProjectDetails } from '../app/page/project-details/project-details'
 import { PostSkill } from '../app/Components/postSkill/postSkill'
 import { PostCert } from '../app/Components/postCert/postCert'
-import { CertPage } from '../app/page/certPage'
+import { Skill } from '../app/page/skill/skills'
+import { Home } from '../app/page/home/home'
+import { Cert } from '../app/page/cert/cert'
+import { Contact } from '../app/page/Contact/contact'
 
 export const IndexRoutes = () => {
   return (
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="/home" element={<HomePage />} />
-        <Route path="/skills" element={<SkillPage />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/skills" element={<Skill />} />
         <Route path="/post_skill" element={<PostSkill />} />
         <Route path="/post_cert" element={<PostCert />} />
-        <Route path="/project" element={<ProjectPage />} />
-        <Route path="/certificates" element={<CertPage />} />
-        <Route path="/contact" element={<ContactPage />} />
+        <Route path="/project" element={<Project />} />
+        <Route path="/certificates" element={<Cert />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="project_details/:id" element={<ProjectDetails />} />
         <Route
           path="*"

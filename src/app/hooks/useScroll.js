@@ -2,7 +2,6 @@ import { useState } from 'react'
 
 export const useScroll = () => {
   const [show, setShow] = useState(false)
-  const [head, setHead] = useState('')
   const ScrollChange = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' })
   }
@@ -14,5 +13,5 @@ export const useScroll = () => {
       setShow(false)
     }
   }
-  return [show, head, setHead, ScrollChange]
+  return [show, ScrollChange]
 }

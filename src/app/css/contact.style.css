@@ -1,0 +1,92 @@
+.ContactContainer {
+  background-color: #020c1b;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 40px;
+  justify-content: space-between;
+  align-items: center;
+  min-width: 98.7;
+}
+.ContactContainer__title {
+  height: 20vh;
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.ContactContainer__title__h1 {
+  background-color: #3b3f56;
+  width: 70%;
+  height: 40%;
+  box-shadow: 0px 4px 4px rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ContactContainer__title__h1 h1 {
+  color: #f9690e;
+  font-family: Inter;
+  font-weight: bold;
+}
+.ContactContainer__title p {
+  color: #f9690e;
+  font-family: Inter;
+  font-size: 18px;
+  font-weight: bold;
+}
+.ContactContainer__content {
+  height: 65vh;
+  width: 70vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.ContactContainer__content__buttonGroup {
+  height: 60%;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+.ContactContainer__content__buttonGroup__item {
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: transparent;
+  border: none;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 8px;
+}
+.ContactContainer__content__buttonGroup__item h2 {
+  color: #f9690e;
+  font-family: Inter;
+
+  font-weight: bold;
+}
+.ContactContainer__content__buttonGroup__item p {
+  color: #f9690e;
+  font-family: Inter;
+
+  font-weight: bold;
+}
+.ContactContainer__content__buttonGroup__item a {
+  color: #f9690e;
+  font-family: Inter;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.ContactContainer__content__image {
+  width: 60%;
+  height: 100%;
+}
+.ContactContainer__content__image img {
+  width: 100%;
+  object-fit: contain;
+}

@@ -1,36 +1,36 @@
-import "./postProyect.style.css";
-import React, { useState } from "react";
+import './postProyect.style.css'
+import React, { useState } from 'react'
 
-import { app } from "../../../firebase-coneccion";
-import { postProyect } from "../../../services/services-proyect";
+import { app } from '../../../firebase-coneccion'
+import { postProyect } from '../../../services/services-project'
 
 const PostProyect = () => {
-  const [filesUrl, setFilesUrl] = useState([]);
+  const [filesUrl, setFilesUrl] = useState([])
   const fileHandler = async (e) => {
-    console.log(e.target.files);
+    console.log(e.target.files)
     for (const key in e.target.files) {
       if (Object.hasOwnProperty.call(e.target.files, key)) {
-        const element = e.target.files[key];
-        const file = element;
-        const storegeRef = app.storage().ref();
-        const filePath = storegeRef.child(file.name);
-        await filePath.put(file);
-        const linkUrl = await filePath.getDownloadURL();
-        setFilesUrl((prevFiles) => [...prevFiles, linkUrl]);
+        const element = e.target.files[key]
+        const file = element
+        const storageRef = app.storage().ref()
+        const filePath = storageRef.child(file.name)
+        await filePath.put(file)
+        const linkUrl = await filePath.getDownloadURL()
+        setFilesUrl((prevFiles) => [...prevFiles, linkUrl])
       }
     }
-  };
-  console.log(filesUrl);
+  }
+  console.log(filesUrl)
   const submitHandler = (e) => {
-    e.preventDefault();
-    const nameFIle = e.target.nombre.value;
-    const descripcion = e.target.descripcion.value;
-    const proyect = { name: nameFIle, descripcion, imgs: filesUrl };
-    console.log(proyect);
+    e.preventDefault()
+    const nameFIle = e.target.nombre.value
+    const descripcion = e.target.descripcion.value
+    const proyect = { name: nameFIle, descripcion, imgs: filesUrl }
+    console.log(proyect)
     postProyect(proyect).then((response) => {
-      console.log(response);
-    });
-  };
+      console.log(response)
+    })
+  }
 
   return (
     <>
@@ -55,7 +55,7 @@ const PostProyect = () => {
         <button>Send Reques</button>
       </form>
     </>
-  );
-};
+  )
+}
 
-export default PostProyect;
+export default PostProyect

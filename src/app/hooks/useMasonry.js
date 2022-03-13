@@ -9,7 +9,7 @@ export const useMasonry = (files = []) => {
   const [columns, setColumns] = useState([])
   const [totalColumns, setTotalColumns] = useState(3)
 
-  const cambiarTamañao = () => {
+  const handleSize = () => {
     if (window.innerWidth > 700) {
       setTotalColumns(3)
     }
@@ -17,12 +17,12 @@ export const useMasonry = (files = []) => {
       setTotalColumns(2)
     }
     if (window.innerWidth <= 375) {
-      setTotalColumns(2)
+      setTotalColumns(1)
     }
   }
 
   useEffect(() => {
-    window.addEventListener('resize', cambiarTamañao)
+    window.addEventListener('resize', handleSize)
   }, [])
 
   useEffect(() => {

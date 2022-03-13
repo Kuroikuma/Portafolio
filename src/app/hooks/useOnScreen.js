@@ -5,8 +5,8 @@ export const useOnScreen = (options) => {
   const [isVisible, setIsVisible] = useState(false)
 
   const onChange = (entries) => {
-    const titleProyect = entries[0]
-    setIsVisible(titleProyect.isIntersecting)
+    const titleProject = entries[0]
+    setIsVisible(titleProject.isIntersecting)
   }
 
   useEffect(() => {
