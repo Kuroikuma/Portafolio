@@ -4,7 +4,7 @@ div {
 .SkillContainer {
   height: auto;
   min-height: 100vh;
-  width: 98.7vw;
+  min-width: 98.7vw;
   background-color: #020c1b;
   display: flex;
   padding-bottom: 40px;
@@ -113,47 +113,22 @@ div {
   object-fit: contain;
 }
 @media screen and (max-width: 1024px) {
-  .SkillContainer {
-    width: 100vw;
-  }
-  .SkillContainer__Skills__item {
-    height: 70%;
-    width: 18%;
-    font-size: 12px;
-  }
 }
 @media screen and (max-width: 768px) {
-  .SkillContainer {
-    height: auto;
-    width: 100vw;
-  }
-  .SkillContainer__Skills {
-    margin-top: 5vh;
-    z-index: 200;
-  }
-  .SkillContainer__Skills__Columns {
-    height: auto;
-    flex-wrap: wrap;
-  }
-  .SkillContainer__Skills__item {
-    height: 40vh;
-    width: 40%;
-    font-size: 12px;
-  }
 }
 @media screen and (max-width: 425px) {
-  .SkillContainer__Skills__item {
-    height: 20vh;
-  }
+}
+@media screen and (max-width: 375px) {
   .SkillContainer__Skills {
+    width: 90vw;
+    grid-template-columns: repeat(1, 100%);
+    grid-auto-rows: 50vh;
     border-radius: 40px;
+  }
+  .SkillContainer__Skills__item {
+    height: 50vh;
   }
 }
 /***************    Estilando cuando esta rotado los moviles      **************/
 @media screen and (max-height: 425px) {
-  .SkillContainer__Skills__item {
-    height: 60vh;
-    width: 34%;
-    font-size: 12px;
-  }
 }

@@ -1,7 +1,7 @@
 .ProjectContainer {
   height: auto;
   min-height: 100vh;
-  width: 98.7vw;
+  min-width: 98.7vw;
   padding-bottom: 30px;
   gap: 50px;
   display: flex;
@@ -166,6 +166,31 @@
 @media screen and (max-width: 425px) {
 }
 @media screen and (max-width: 375px) {
+  .ProjectContainer__View {
+    height: 100vh;
+    width: 90vw;
+    display: flex;
+    flex-direction: column;
+  }
+  .ProjectContainer__Card__info {
+    height: 50%;
+    width: 100%;
+    border-radius: 24px;
+  }
+  .ProjectContainer__Card__img {
+    height: 45%;
+    width: 100%;
+  }
+  .ProjectContainer__Card__info__title h1 {
+    font-size: 28px;
+  }
+  .ProjectContainer__Card__info__link {
+    min-width: 80vw;
+  }
+  .ProjectContainer__View__ButtonGroup {
+    max-width: 102%;
+    overflow: hidden;
+  }
 }
 @media screen and (max-height: 425px) {
 }

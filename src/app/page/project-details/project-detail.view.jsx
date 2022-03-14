@@ -28,7 +28,7 @@ export const ProjectDetailsView = ({ technologies, image, columns }) => {
         </div>
         <div className="ProjectDetailsContainer__gallery">
           <div className="ProjectDetailsContainer__gallery__title">
-            <h1>Gallery Project Images</h1>
+            <h1>Project Image Gallery</h1>
           </div>
           <Gallery columns={columns} />
         </div>

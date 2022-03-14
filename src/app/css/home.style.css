@@ -1,6 +1,6 @@
 .HomeContainer {
   height: 100vh;
-  width: 98.7vw;
+  min-width: 98.7vw;
   background-color: #020c1b;
   display: flex;
   flex-direction: column;
@@ -94,6 +94,34 @@
 @media screen and (max-width: 425px) {
 }
 @media screen and (max-width: 375px) {
+  .HomeContainer {
+    justify-content: center;
+  }
+  .homeContent {
+    width: 90%;
+    height: 90%;
+    flex-direction: column-reverse;
+  }
+  .infoContainer {
+    height: 45%;
+    width: 100%;
+    align-items: flex-start;
+  }
+  .infoContent {
+    height: 90%;
+  }
+  .infoContent h1 {
+    font-size: 34px;
+  }
+
+  .HomeContainer__Info__Contact {
+    height: 50%;
+    justify-content: space-evenly;
+  }
+
+  .homeProfile {
+    height: 50%;
+  }
 }
 @media screen and (max-height: 425px) {
 }

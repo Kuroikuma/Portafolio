@@ -11,7 +11,7 @@ import { Contact } from '../app/page/Contact/contact'
 
 export const IndexRoutes = () => {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={process.env.PUBLIC_URL}>
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/home" element={<Home />} />

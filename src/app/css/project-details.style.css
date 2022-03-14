@@ -66,3 +66,8 @@
   font-family: Inter;
   font-weight: bold;
 }
+@media screen and (max-width: 375px) {
+  .ProjectDetailsContainer__content {
+    width: 90vw;
+  }
+}

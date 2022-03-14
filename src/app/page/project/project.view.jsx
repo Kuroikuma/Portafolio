@@ -12,12 +12,12 @@ export const ProjectView = (props) => {
       {flag && (
         <>
           <Helmet>
-            <title>Skill</title>
+            <title>Project</title>
           </Helmet>
           <Navigation />
         </>
       )}
-      <Title text="my Project" />
+      <Title text="my Projects" />
       {project.result &&
         project.result.map((item, index) => (
           <ProjectViewCard

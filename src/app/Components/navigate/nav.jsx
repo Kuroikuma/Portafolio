@@ -18,10 +18,27 @@ export const Navigation = () => {
   }
   return (
     <>
-      <div className="dropdown">
-        <button onClick={dropDownHandler}></button>
-      </div>
-      <div className={`NavBar`}>
+      <button
+        className={show ? 'dropdown dropdown--close' : 'dropdown'}
+        onClick={dropDownHandler}
+      >
+        <div
+          className={
+            show ? 'dropdown__item dropdown__item--close' : 'dropdown__item'
+          }
+        ></div>
+        <div
+          className={
+            show ? 'dropdown__item dropdown__item--close' : 'dropdown__item'
+          }
+        ></div>
+        <div
+          className={
+            show ? 'dropdown__item dropdown__item--close' : 'dropdown__item'
+          }
+        ></div>
+      </button>
+      <div className={show ? `NavBar NavBar--show` : `NavBar`}>
         <button onClick={goMain} className="goMain">
           <Logo />
         </button>

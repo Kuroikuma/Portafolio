@@ -23,7 +23,7 @@ export const CertView = ({
           <Navigation />
         </>
       )}
-      <Title text="my certificates" />
+      <Title text="my certifications" />
       {loading ? (
         <div className="certContainer__content">
           {Array(6)

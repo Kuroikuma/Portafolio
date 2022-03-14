@@ -1,6 +1,6 @@
 .Container__Title {
   height: 10vh;
-  width: 60vw;
+  min-width: 60vw;
   z-index: 1;
   display: flex;
   opacity: 0;
@@ -21,4 +21,10 @@
   color: #f9690e;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   font-family: Inter;
+}
+@media screen and (max-width: 375px) {
+  .Container__Title {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
 }
