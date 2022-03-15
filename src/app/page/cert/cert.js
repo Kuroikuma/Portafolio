@@ -1,48 +1,45 @@
 import { useEffect, useState } from 'react'
-import { getCert, getCertPagination } from '../../../services/services.cert'
+import { useDispatch, useSelector } from 'react-redux'
+import {
+  fetchCert,
+  fetchCertPagination,
+  setUrl,
+} from '../../../redux/slices/cert'
 import { useMasonry } from '../../hooks/useMasonry'
 import { CertView } from './cert.view'
 
 export const Cert = ({ flag = true }) => {
-  const [next, setNext] = useState('')
-  const [url, setUrl] = useState('')
-  const [previous, setPrevious] = useState('')
+  let dispatch = useDispatch()
+  const next = useSelector((state) => state.cert.next)
+  const loading = useSelector((state) => state.cert.loading)
+  const url = useSelector((state) => state.cert.url)
+  const previous = useSelector((state) => state.cert.previous)
   const [counter, setCounter] = useState(1)
-  const [loading, setLoading] = useState(false)
   const [columns, setData] = useMasonry()
 
   useEffect(() => {
-    setLoading(true)
     if (url) {
-      getCertPagination(url).then((response) => {
-        const imageFilter = response.result.map((item) => item.image)
-        setData(imageFilter)
-        setLoading(false)
-        setNext(response.next)
-        setPrevious(response.previous)
-      })
+      dispatch(fetchCertPagination(setData))
     } else {
-      getCert().then((response) => {
-        const imageFilter = response.result.map((item) => item.image)
-        setData(imageFilter)
-        setLoading(false)
-        setNext(response.next)
-        setPrevious(response.previous)
-      })
+      dispatch(fetchCert(setData))
     }
   }, [url])
+
+  useEffect(() => {
+    console.log(loading)
+  }, [loading])
 
   const nextCert = () => {
     if (counter < 4) {
       setCounter(counter + 1)
-      setUrl(next)
+      dispatch(setUrl(next))
     }
   }
 
   const previewCert = () => {
     if (counter > 1) {
       setCounter(counter - 1)
-      setUrl(previous ? previous : '')
+      dispatch(setUrl(previous ? previous : ''))
     }
   }
 

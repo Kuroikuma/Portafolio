@@ -8,9 +8,9 @@ export const ButtonNav = ({ type }) => {
   }
   return (
     <div className="NavBar__Right__item">
-      <button onClick={goPage} name={type}>
+      <p onClick={goPage} name={type}>
         {type}
-      </button>
+      </p>
     </div>
   )
 }

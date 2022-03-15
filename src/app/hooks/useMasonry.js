@@ -35,9 +35,6 @@ export const useMasonry = (files = []) => {
         for (let j = 0; j < totalColumns; j++) {
           if (data[i * totalColumns + j]) {
             if (j === 0) {
-              console.log(
-                i * totalColumns + j + ' ' + data[i * totalColumns + j]
-              )
               setColumn1((prevColumn) => [
                 ...prevColumn,
                 data[i * totalColumns + j],
