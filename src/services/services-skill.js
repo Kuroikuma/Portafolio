@@ -1,5 +1,5 @@
 import axios from 'axios'
-const apiUrl = 'https://backend-portfolio-gc9s3ziqc-kuroikuma.vercel.app/api/skill'
+const apiUrl = 'https://backend-portfolio-nu.vercel.app/api/skill'
 
 export const getSkill = async () => {
   const baseUrl = apiUrl

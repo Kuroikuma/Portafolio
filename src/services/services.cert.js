@@ -1,5 +1,5 @@
 import axios from 'axios'
-const apiUrl = 'https://backend-portfolio-gc9s3ziqc-kuroikuma.vercel.app/api/cert'
+const apiUrl = 'https://backend-portfolio-nu.vercel.app/api/cert'
 
 export const getCert = async () => {
   const baseUrl = apiUrl
